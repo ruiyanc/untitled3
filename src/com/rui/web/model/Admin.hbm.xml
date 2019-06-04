@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.rui.web.model">
+    <class name="Admin" table="admin">
+        <id name="id" column="id">
+<!--            根据数据库主键自增-->
+            <generator class="native" />
+        </id>
+<!--        多列复合主键-->
+<!--        <composite-id>-->
+<!--            <key-many-to-one name="username"/>-->
+<!--        </composite-id>-->
+<!--        非主键映射,属性与列名一一对应-->
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+<!--        <many-to-one name="org" lazy="false" fetch="join" />-->
+<!--        <query name="contacts">from Contact</query>-->
+    </class>
+
+</hibernate-mapping>
