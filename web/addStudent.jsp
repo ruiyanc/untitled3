@@ -14,7 +14,7 @@
 <body>
 <h2>添加学生</h2>
 <s:actionerror/>
-<s:form action="add">
+<s:form action="add" method="POST">
 	<s:textfield name="username" label="用户名"/>
 	<s:textfield name="age" label="年龄"/>
 	<s:textfield name="email" label="邮箱"/>

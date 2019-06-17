@@ -29,7 +29,7 @@
 	<s:reset value="重置"/>
 </s:form>
 <s:a cssErrorClass="ui-corner-all" label="这是a标签" href="http://www.google.com"/>
-<%--<form action="<s:url action="regist"/>" method="post">
+<%--<form action="<s:url action="addUser"/>" method="post">
 	用户名：<input type="text" name="username"><br>
 	密码：<input type="password" name="password"><br>
 	生日：<input type="text" name="birthday"><br>

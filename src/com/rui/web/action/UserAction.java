@@ -2,7 +2,6 @@ package com.rui.web.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import com.rui.service.impl.UserServiceImpl;
 import com.rui.web.model.User;
 import org.apache.commons.lang3.StringUtils;
 
@@ -31,7 +30,7 @@ public class UserAction extends ActionSupport implements ModelDriven {
     public String register() {
         System.out.println(user);
 //        UserServiceImpl service = new UserServiceImpl();
-//        service.regist(user);
+//        service.addUser(user);
         return SUCCESS;
     }
 }

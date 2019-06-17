@@ -13,7 +13,6 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
 
     public String add()  {
         System.out.println(stu);
-        System.out.println(stu);
         return SUCCESS;
     }
 

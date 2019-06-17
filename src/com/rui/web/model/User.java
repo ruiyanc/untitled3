@@ -9,12 +9,21 @@ public class User {
     private String hobby;
     private Boolean married;
 
-    public User() {
+    public User(){
+
     }
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public User(String username, String password, Date birthday, String hobby, Boolean married) {
+        this.username = username;
+        this.password = password;
+        this.birthday = birthday;
+        this.hobby = hobby;
+        this.married = married;
     }
 
     public String getUsername() {

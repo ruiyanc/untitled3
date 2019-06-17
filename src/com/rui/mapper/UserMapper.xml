@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.rui.mapper.UserMapper">
+    <insert id="save" parameterType="com.rui.web.model.User">
+        INSERT INTO user values (#{username},#{password},#{birthday},#{hobby},#{married})
+    </insert>
+    <select id="findUserByName" parameterType="String" resultType="com.rui.web.model.User">
+        SELECT * from user where username = #{username}
+    </select>
+    <select id="findUserAll"  resultType="com.rui.web.model.User">
+        SELECT * from user
+    </select>
+</mapper>

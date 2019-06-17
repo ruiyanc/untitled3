@@ -10,20 +10,20 @@
     <!--    开发模式-->
     <constant name="struts.devMode" value="true"/>
     <package name="p2" extends="struts-default" namespace="/">
-<!--        声明拦截器-->
+        <!--        声明拦截器-->
         <interceptors>
             <interceptor name="myInterceptor" class="com.rui.web.interceptor.MyInterceptor"/>
         </interceptors>
         <action name="register" class="com.rui.web.action.UserAction" method="register">
             <!--使用拦截器-->
-<!--            <interceptor-ref name="myInterceptor"/>-->
+            <!--            <interceptor-ref name="myInterceptor"/>-->
             <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="tokenSession"/>
             <result name="input">/register.jsp</result>
             <result name="success" type="redirect">/index.jsp</result>
         </action>
     </package>
-<!--    上传大小上限-->
+    <!--    上传大小上限-->
     <constant name="struts.multipart.maxSize" value="1000000" />
     <package name="p3" extends="struts-default">
         <action name="upload" class="com.rui.web.action.UploadAction">
@@ -33,7 +33,7 @@
     </package>
     <package name="p4" extends="struts-default">
         <action name="add" class="com.rui.web.action.StudentAction" method="add">
-<!--            <interceptor-ref name="params"/>-->
+            <!--            <interceptor-ref name="params"/>-->
             <result name="success">/index.jsp</result>
             <result name="input">/addStudent.jsp</result>
         </action>

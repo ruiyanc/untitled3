@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    配置Mybatis的环境-->
+    <environments default="development">
+        <environment id="development">
+<!--            配置jdbc事务控制，由Mybatis进行管理-->
+            <transactionManager type="JDBC"/>
+<!--            配置数据源，采用dbcp连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+<!--    加载映射文件-->
+    <mappers>
+<!--        <mapper resource="com/rui/web/model/User.xml"/>-->
+        <mapper resource="com/rui/mapper/UserMapper.xml"/>
+    </mappers>
+    <!-- settings -->
+<!--    <settings>-->
+<!--        &lt;!&ndash; 打开延迟加载的开关 &ndash;&gt;-->
+<!--        <setting name="lazyLoadingEnabled" value="true"/>-->
+<!--        &lt;!&ndash; 将积极加载改为消极加载（即按需加载） &ndash;&gt;-->
+<!--        <setting name="aggressiveLazyLoading" value="false"/>-->
+<!--        &lt;!&ndash; 打开全局缓存开关（二级缓存）默认值就是 true &ndash;&gt;-->
+<!--        <setting name="cacheEnabled" value="true"/>-->
+<!--    </settings>-->
+    <!-- 别名定义 -->
+<!--    <typeAliases>-->
+<!--        <package name="com.rui.web.model.User"/>-->
+<!--    </typeAliases>-->
+</configuration>
