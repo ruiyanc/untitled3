@@ -53,4 +53,18 @@
  * AspectJ通知类型:spring-aspect包
 
 ##SpringMVC
-* 
+* 由DispatcherServlet、控制器映射、适配器、控制器、视图、视图解析器组成
+* 配置url处理映射:通过访问路径找到对应的控制器
+    * BeanNameUrlHandlerMapping:通过url名字对应bean的name
+    * SimpleUrlHandlerMapping:通过key找id
+    * ControllerClassNameHandlerMapping:不配置访问路径,默认为类名
+* 控制器的实现
+    * @Controller:定义控制器
+    * @RequestMapping(""):请求url路径
+        * method=RequestMethod.POST:post请求
+    * @RequestParam(value = "id",required = true, defaultValue = "30"):配置参数
+    * @RequestParam:将请求参数绑定至方法参数
+    * @RequestBody:注解映射请求体
+    * @ModelAttribute:常用于从数据库中取一个属性值
+    * @SessionAttributes:使用HTTP会话保存模型数据
+    * @CookieValue:映射cookie值
